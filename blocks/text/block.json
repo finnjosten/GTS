@@ -1,0 +1,15 @@
+{
+    "name": "acf/text",
+    "title": "Text",
+    "description": "A custom text block that uses ACF fields.",
+    "category": "GTS-blocks",
+    "icon": "admin-comments",
+    "keywords": ["text", "GTS"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "text.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

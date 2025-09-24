@@ -1,0 +1,15 @@
+{
+    "name": "acf/default",
+    "title": "Default",
+    "description": "A custom default block that uses ACF fields.",
+    "category": "GTS-blocks",
+    "icon": "welcome-widgets-menus",
+    "keywords": ["Default", "GTS"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "default.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

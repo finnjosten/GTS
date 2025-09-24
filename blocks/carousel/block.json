@@ -1,0 +1,15 @@
+{
+    "name": "acf/carousel",
+    "title": "Carousel",
+    "description": "A custom carousel block that uses ACF fields.",
+    "category": "GTS-blocks",
+    "icon": "format-gallery",
+    "keywords": ["carousel", "GTS"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "carousel.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

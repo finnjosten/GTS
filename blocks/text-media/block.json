@@ -1,0 +1,15 @@
+{
+    "name": "acf/text-media",
+    "title": "Text & media",
+    "description": "A custom text-media block that uses ACF fields.",
+    "category": "GTS-blocks",
+    "icon": "admin-comments",
+    "keywords": ["text media", "GTS"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "text-media.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

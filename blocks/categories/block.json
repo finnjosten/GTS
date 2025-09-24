@@ -1,0 +1,15 @@
+{
+    "name": "acf/categories",
+    "title": "Categories",
+    "description": "A custom categories block that uses ACF fields.",
+    "category": "GTS-blocks",
+    "icon": "welcome-widgets-menus",
+    "keywords": ["categories", "GTS"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "categories.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

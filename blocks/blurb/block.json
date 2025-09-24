@@ -1,0 +1,15 @@
+{
+    "name": "acf/blurb",
+    "title": "Kolommen",
+    "description": "A custom blurb block that uses ACF fields.",
+    "category": "GTS-blocks",
+    "icon": "welcome-widgets-menus",
+    "keywords": ["blurb", "kolom", "kolommen", "GTS"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "blurb.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

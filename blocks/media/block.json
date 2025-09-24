@@ -1,0 +1,15 @@
+{
+    "name": "acf/media",
+    "title": "Media",
+    "description": "A custom media block that uses ACF fields.",
+    "category": "GTS-blocks",
+    "icon": "images-alt2",
+    "keywords": ["media", "GTS"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "media.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

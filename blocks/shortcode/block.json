@@ -1,0 +1,15 @@
+{
+    "name": "acf/shortcode",
+    "title": "Shortcode",
+    "description": "A custom shortcode block that uses ACF fields.",
+    "category": "GTS-blocks",
+    "icon": "shortcode",
+    "keywords": ["shortcode", "GTS"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "shortcode.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}
