@@ -1,8 +1,8 @@
 <!-- Header -->
 <header id="header">
-    <a href="index.html"><img src="<?= get_site_url(null, 'wp-content/themes/GTS/assets/img/logo.svg') ?>" alt="" class="logo" /></a>
+    <a href="/"><img src="<?= get_site_url(null, 'wp-content/themes/GTS/assets/img/logo.svg') ?>" alt="" class="logo" /></a>
     <nav class="links">
-        <?= gts_build_nav_menu('mainmenu'); ?>
+        <?= gts_build_nav_menu('Hoofdmenu'); ?>
     </nav>
     <nav class="main">
         <ul>

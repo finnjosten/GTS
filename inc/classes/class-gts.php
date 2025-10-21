@@ -58,7 +58,7 @@ if (! class_exists('GTS')) {
                 function wpb_allowed_block_types($allowed_blocks, $block_editor_context)
                 {
 
-                    if ($block_editor_context->post && $block_editor_context->post->post_type === 'post') {
+                    if ($block_editor_context->post && $block_editor_context->post->post_type === 'blog') {
                         $default = [
                             'core/shortcode',
                             'core/paragraph',
@@ -104,8 +104,8 @@ if (! class_exists('GTS')) {
             add_theme_support('post-thumbnails');
             define('DISALLOW_FILE_EDIT', true);
 
-            register_nav_menu('mainmenu', __('Hoofdmenu', 'GTS'));
-            register_nav_menu('sidemenu', __('Sidemenu', 'GTS'));
+            register_nav_menu('mainmenu', 'Hoofdmenu');
+            register_nav_menu('sidemenu', 'Sidemenu');
 
             add_action('tgmpa_register', array($this, 'register_required_plugins'));
         }
@@ -160,22 +160,22 @@ if (! class_exists('GTS')) {
              * Styles
              */
             // Alle files in de assets/css map worden gemerged (behalve admin-style.css)
-            wp_enqueue_style('gts-style',           get_template_directory_uri() . '/style.css',                            false, '1.1', 'all');
-            wp_enqueue_style('gts-style-core',      get_template_directory_uri() . '/assets/sass/main.css',                 false, '1.1', 'all');
-            wp_enqueue_style('gts-fa',              get_template_directory_uri() . '/assets/css/fontawesome-all.min.css',   false, '1.1', 'all');
+            wp_enqueue_style('gts-style',           get_template_directory_uri() . '/style.css',                            false, $GTS->version, 'all');
+            wp_enqueue_style('gts-style-core',      get_template_directory_uri() . '/assets/sass/main.css',                 false, $GTS->version, 'all');
+            wp_enqueue_style('gts-fa',              get_template_directory_uri() . '/assets/css/fontawesome-all.min.css',   false, $GTS->version, 'all');
 
             /**
              * Scripts
              */
-            wp_enqueue_script('gts-main',           get_template_directory_uri() . '/assets/js/main.js',            array('jQuery'), $GTS->version, true);
-            wp_enqueue_script('gts-util',           get_template_directory_uri() . '/assets/js/util.js',            array('jQuery'), $GTS->version, true);
-            wp_enqueue_script('gts-breakpoints',    get_template_directory_uri() . '/assets/js/breakpoints.min.js', array('jQuery'), $GTS->version, true);
-            wp_enqueue_script('gts-browser',        get_template_directory_uri() . '/assets/js/browser.min.js',     array('jQuery'), $GTS->version, true);
+            wp_enqueue_script('gts-main-js',        get_template_directory_uri() . '/assets/js/main.js',                    array('jquery'), $GTS->version, true);
+            wp_enqueue_script('gts-util-js',        get_template_directory_uri() . '/assets/js/util.js',                    array('jquery'), $GTS->version, true);
+            wp_enqueue_script('gts-breakpoints-js', get_template_directory_uri() . '/assets/js/breakpoints.min.js',         array('jquery'), $GTS->version, true);
+            wp_enqueue_script('gts-browser-js',     get_template_directory_uri() . '/assets/js/browser.min.js',             array('jquery'), $GTS->version, true);
 
             /**
              * Dequeue scripts and styles in front-end
              */
-            if (!is_admin()) {
+            /* if (!is_admin()) {
 
                 $scripts = array(
                     "jquery-ui-widget",
@@ -220,7 +220,7 @@ if (! class_exists('GTS')) {
 
                 // Remove from TinyMCE
                 add_filter('tiny_mce_plugins', 'disable_emojis_tinymce');
-            }
+            }*/
         }
 
         public function admin_scripts() {

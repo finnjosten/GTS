@@ -4,41 +4,41 @@
 if (!function_exists('gts_get_menu_array')) {
     function gts_get_menu_array($menu_name) {
         $menu_array = wp_get_nav_menu_items($menu_name);
-        $aMenu = [];
+        $menu = [];
 
-        foreach ($menu_array as $m) {
-            if (empty($m->menu_item_parent)) {
-                $aMenu[$m->ID] = [
-                    'ID' => $m->ID,
-                    'title' => $m->title,
-                    'url' => $m->url,
-                    'type' => $m->type,
-                    'object' => $m->object,
-                    'object_id' => $m->object_id,
-                    'children' => gts_populate_menu_children($menu_array, $m),
+        foreach ($menu_array as $item) {
+            if (empty($item->menu_item_parent)) {
+                $menu[$item->ID] = [
+                    'ID' => $item->ID,
+                    'title' => $item->title,
+                    'url' => $item->url,
+                    'type' => $item->type,
+                    'object' => $item->object,
+                    'object_id' => $item->object_id,
+                    'children' => gts_populate_menu_children($menu_array, $item),
                 ];
             }
         }
 
-        return $aMenu;
+        return $menu;
     }
 
     function gts_populate_menu_children($menu_array, $menu_item) {
         $children = [];
 
-        foreach ($menu_array as $k => $m) {
-            if ($m->menu_item_parent == $menu_item->ID) {
-                $children[$m->ID] = [
-                    'ID' => $m->ID,
-                    'title' => $m->title,
-                    'url' => $m->url,
-                    'type' => $m->type,
-                    'object' => $m->object,
-                    'object_id' => $m->object_id,
-                    'term' => get_term($m->object_id),
-                    'children' => gts_populate_menu_children($menu_array, $m),
+        foreach ($menu_array as $i => $item) {
+            if ($item->menu_item_parent == $menu_item->ID) {
+                $children[$item->ID] = [
+                    'ID' => $item->ID,
+                    'title' => $item->title,
+                    'url' => $item->url,
+                    'type' => $item->type,
+                    'object' => $item->object,
+                    'object_id' => $item->object_id,
+                    'term' => get_term($item->object_id),
+                    'children' => gts_populate_menu_children($menu_array, $item),
                 ];
-                unset($menu_array[$k]);
+                unset($menu_array[$i]);
             }
         }
 
@@ -114,15 +114,15 @@ if (!function_exists('gts_build_nav_menu')) {
 if (!function_exists('gts_build_footer_menu')) {
     function gts_build_footer_menu($menu_name, $niveaus = 1)
     {
-        $aMenu = gts_get_menu_array($menu_name);
+        $items = gts_get_menu_array($menu_name);
         $currentPageID = is_page() ? get_queried_object()->ID : '';
         $currentPageName = get_queried_object()->label ?? '';
 
-        if (!empty($aMenu)) {
+        if (!empty($items)) {
             echo '<ul class="wpb-footer-menu wpb-footer-menu--' . strtolower($menu_name) . '">';
 
             // Display menu items
-            foreach ($aMenu as $item) {
+            foreach ($items as $item) {
                 echo '<li id="footer-menu-item-' . $item['ID'] . '" class="footer-menu-item';
                 if (($currentPageID && $currentPageID == $item['object_id']) || ($currentPageName && $currentPageName == $item['title'])) {
                     echo ' footer-menu-item--current';
