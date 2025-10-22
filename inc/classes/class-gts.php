@@ -24,7 +24,7 @@ if (! class_exists('GTS')) {
         private static $instance;
 
         /**
-         * Initiator
+         * Initiator (Singleton)
          */
         public static function get_instance() {
             if (! isset(self::$instance)) {
@@ -34,14 +34,15 @@ if (! class_exists('GTS')) {
         }
 
         public function __construct() {
+            // Define all the actions to be ran and when
             add_action('init',                      array($this, 'init'));
+            add_action('widgets_init',              array($this, 'widget_init'));
             add_action('after_setup_theme',         array($this, 'setup'));
             add_action('wp_enqueue_scripts',        array($this, 'scripts'), 10);
             add_action('admin_enqueue_scripts',     array($this, 'admin_scripts'), 10);
             add_action('admin_menu',                array($this, 'admin_menu'));
             add_action('upload_mimes',              array($this, 'upload_mimes'));
             add_filter('body_class',                array($this, 'add_body_class'));
-            add_filter('after_switch_theme',        array($this, 'create_menus_and_pages'));
 
             
             add_action('wp_head',                   array($this, 'add_header_code'), 0);
@@ -80,22 +81,48 @@ if (! class_exists('GTS')) {
                             'core/categories',
                             'core/search',
                             'core/quote',
+                            'core/group',
                         ];
-                        return $default;
+
+                        $acf = acf_get_block_types();
+                        $blocks = [];
+
+                        foreach ($acf as $block) {
+                            if (!str_contains($block['name'], 'side')) continue;
+                            $blocks[] = $block['name'];
+                        }
+
+                        return array_merge($default, $blocks);
                     }
 
                     $acf = acf_get_block_types();
                     $blocks = [];
+
                     foreach ($acf as $block) {
+                        if (str_contains($block['name'], 'side')) continue;
                         $blocks[] = $block['name'];
                     }
+
                     $custom = [
                         'core/shortcode',
                     ];
+
                     return array_merge($custom, $blocks);
                 }
                 add_filter('allowed_block_types_all', 'wpb_allowed_block_types', 10, 2);
             }
+        }
+
+        public function widget_init() {
+            register_sidebar( array(
+                'name'          => __( 'GTS Sidebar', 'GTS' ),
+                'id'            => 'sidebar-gts',
+                'description'   => __( 'Add widgets here.', 'GTS' ),
+                'before_widget' => '',
+                'after_widget'  => '',
+                'before_title'  => '',
+                'after_title'   => '',
+            ) );
         }
 
         public function setup() {
@@ -115,7 +142,7 @@ if (! class_exists('GTS')) {
                 array(
                     'name'      => 'Secure Custom Fields',
                     'slug'      => 'secure-custom-fields',
-                    'required'  => false,
+                    'required'  => true,
                     'force_activation' => false,
                     'force_deactivation' => false,
                 ),

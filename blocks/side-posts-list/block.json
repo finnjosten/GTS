@@ -1,0 +1,15 @@
+{
+    "name": "acf/side-posts-list",
+    "title": "Posts list",
+    "description": "A custom block that displays a posts list.",
+    "category": "GTS-sidebar",
+    "icon": "shortcode",
+    "keywords": ["posts", "list", "GTS"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "side-posts-list.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

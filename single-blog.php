@@ -39,7 +39,7 @@
         <footer>
             <ul class="stats">
                 <?php if ($taxonomie) : ?>
-                    <li><a href="#"><?= $taxonomie->name ?? 'General' ?></a></li>
+                    <li><a href="#"><?= $taxonomie->name ?? __('General', "GTS") ?></a></li>
                 <?php endif; ?>
                 <li><a href="#" class="icon solid fa-heart"><?= $like_count ?></a></li>
                 <li><a href="#" class="icon solid fa-comment"><?= $comment_count ?></a></li>

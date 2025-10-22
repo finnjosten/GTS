@@ -6,6 +6,7 @@
 function wpb_add_option_page() {
     if( function_exists('acf_add_options_page') ) {
         
+        // Not really needed for the site ATM
         /* acf_add_options_page(array(
             'page_title' 	=> 'GTS Instellingen',
             'menu_title'	=> 'GTS instellingen',
@@ -31,6 +32,10 @@ function wpb_custom_block_category($categories, $post) {
                 'slug'  => 'GTS-blocks',
                 'title' => __('GTS Blocks', 'gts_blocks'), 
             ],
+            [
+                'slug'  => 'GTS-sidebar',
+                'title' => __('GTS Sidebar', 'gts_sidebar'), 
+            ]
         ]
     );
 }

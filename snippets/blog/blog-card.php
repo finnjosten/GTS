@@ -2,6 +2,12 @@
     $blog = $args['blog'] ?? null;
     $index = $args['i'] ?? 0;
 
+    if (!$blog && isset($args['blog_id'])) {
+        $blog = get_post($args['blog_id']);
+    } else if (!$blog) {
+        return;
+    }
+
     $title          = $blog->post_title ?? 'Unnamed blog';
     $small_excerpt  = get_field('small_excerpt', $blog->ID) ?? '';
     $excerpt        = get_field('excerpt', $blog->ID) ?? '';
@@ -38,7 +44,7 @@
         </ul>
         <ul class="stats">
             <?php if ($taxonomie) : ?>
-                <li><a href="#"><?= $taxonomie->name ?? 'General' ?></a></li>
+                <li><a href="#"><?= $taxonomie->name ?? __('General', "GTS") ?></a></li>
             <?php endif; ?>
             <li><a href="#" class="icon solid fa-heart"><?= $like_count ?></a></li>
             <li><a href="#" class="icon solid fa-comment"><?= $comment_count ?></a></li>

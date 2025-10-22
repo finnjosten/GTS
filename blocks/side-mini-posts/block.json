@@ -1,0 +1,15 @@
+{
+    "name": "acf/side-mini-posts",
+    "title": "Mini posts",
+    "description": "A custom block that displays mini posts.",
+    "category": "GTS-sidebar",
+    "icon": "shortcode",
+    "keywords": ["posts", "mini", "mini posts", "GTS"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "side-mini-posts.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}
