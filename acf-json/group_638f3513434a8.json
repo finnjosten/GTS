@@ -122,7 +122,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6461d7580739e",
@@ -150,7 +152,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_638f356acc063",
@@ -167,11 +171,10 @@
                 "id": ""
             },
             "choices": {
-                "transparent": "Transparent",
-                "primary": "Primary",
-                "secondary": "Secondary",
-                "dark": "Dark",
-                "light": "Light"
+                "transparent": "Transpirant",
+                "primary": "Primair",
+                "secondary": "Secundair",
+                "dark": "Donker"
             },
             "default_value": false,
             "return_format": "value",
@@ -179,7 +182,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_638f3582cc065",
@@ -206,7 +211,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_67b8499fc3352",
@@ -248,5 +255,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1740130811
+    "modified": 1761329230
 }

@@ -143,10 +143,13 @@
                     },
                     "wpml_cf_preferences": 3,
                     "choices": {
-                        "primary": "Primary",
+                        "primary": "Primair",
                         "outline": "Outline",
-                        "dark": "Dark",
-                        "light": "Light"
+                        "dark": "Donker",
+                        "light": "Light",
+                        "primary-outline": "Primair outline",
+                        "secondary": "Secundair",
+                        "secondary-outline": "Secundair outline"
                     },
                     "default_value": false,
                     "return_format": "value",
@@ -155,7 +158,9 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_67cae31e97a43"
+                    "parent_repeater": "field_67cae31e97a43",
+                    "create_options": 0,
+                    "save_options": 0
                 },
                 {
                     "key": "field_67cae31e9ed2f",
@@ -184,7 +189,9 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_67cae31e97a43"
+                    "parent_repeater": "field_67cae31e97a43",
+                    "create_options": 0,
+                    "save_options": 0
                 }
             ]
         },
@@ -253,7 +260,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_67cae31e97b07",
@@ -282,7 +291,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_67cae31e97b44",
@@ -300,11 +311,10 @@
             },
             "wpml_cf_preferences": 3,
             "choices": {
-                "transparent": "Transparent",
-                "primary": "Primary",
-                "secondary": "Secondary",
-                "dark": "Dark",
-                "light": "Light"
+                "transparent": "Transpirant",
+                "primary": "Primair",
+                "secondary": "Secundair",
+                "dark": "Donker"
             },
             "default_value": false,
             "return_format": "value",
@@ -312,7 +322,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_67cae31e97b81",
@@ -340,7 +352,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_67cae31e97bbe",
@@ -368,7 +382,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_67cae31e97c38",
@@ -407,7 +423,9 @@
             "allow_in_bindings": 1,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         }
     ],
     "location": [
@@ -425,8 +443,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741349944
+    "modified": 1761329230
 }

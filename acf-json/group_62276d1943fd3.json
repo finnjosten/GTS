@@ -157,10 +157,14 @@
                         "id": ""
                     },
                     "choices": {
-                        "primary": "Primary",
+                        "primary": "Primair",
                         "outline": "Outline",
                         "white": "White",
-                        "link": "Link"
+                        "link": "Link",
+                        "primary-outline": "Primair outline",
+                        "secondary": "Secundair",
+                        "secondary-outline": "Secundair outline",
+                        "dark": "Donker"
                     },
                     "default_value": false,
                     "return_format": "value",
@@ -169,7 +173,9 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_635ba598194d0"
+                    "parent_repeater": "field_635ba598194d0",
+                    "create_options": 0,
+                    "save_options": 0
                 },
                 {
                     "key": "field_65411113c3f09",
@@ -197,7 +203,9 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_635ba598194d0"
+                    "parent_repeater": "field_635ba598194d0",
+                    "create_options": 0,
+                    "save_options": 0
                 }
             ]
         },
@@ -265,7 +273,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6461d7b3c015c",
@@ -293,7 +303,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_62276d1947ca1",
@@ -310,10 +322,10 @@
                 "id": ""
             },
             "choices": {
-                "transparent": "Transparent",
-                "primary": "Primary",
-                "outline": "Outline",
-                "white": "White"
+                "transparent": "Transpirant",
+                "primary": "Primair",
+                "secondary": "Secundair",
+                "dark": "Donker"
             },
             "default_value": false,
             "return_format": "value",
@@ -321,7 +333,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_638f14f7aa56e",
@@ -348,7 +362,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_62276d1947da7",
@@ -374,7 +390,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_638f16ba92aa3",
@@ -401,7 +419,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_65f840b98ac23",
@@ -431,7 +451,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         }
     ],
     "location": [
@@ -452,5 +474,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1722427206
+    "modified": 1761329232
 }

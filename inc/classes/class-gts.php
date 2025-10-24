@@ -49,7 +49,8 @@ if (! class_exists('GTS')) {
             add_action('wp_body_open',              array($this, 'add_body_code'), 0);
 
             // Any other actions should be added before here as this will switch the theme in the end
-            add_filter('after_switch_theme',        array($this, 'create_child_theme'));
+            add_action('after_switch_theme',        array($this, 'setup_admin_flag'));
+            add_action('admin_init',                array($this, 'setup_admin'));
         }
 
         public function init() {
@@ -445,6 +446,23 @@ if (! class_exists('GTS')) {
         }
 
         public function add_body_code() {
+        }
+
+        public function setup_admin_flag() {
+            // Set a flag to indicate that setup is needed
+            update_option('gts_setup_needed', true);
+        }
+
+        public function setup_admin() {
+            if (get_option('gts_setup_needed') && current_user_can('manage_options')) {
+                delete_option('gts_setup_needed');
+
+                // Avoid redirect loops if already on that page
+                if (empty($_GET['page']) || $_GET['page'] !== 'gts-setup') {
+                    wp_safe_redirect(admin_url('admin.php?page=gts-setup'));
+                    exit;
+                }
+            }
         }
 
     }

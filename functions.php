@@ -15,3 +15,6 @@ require 'inc/acf-functions.php';
 require 'inc/classes/class-gts-helper.php';
 require 'inc/gts-functions.php';
 require 'inc/yoast-functions.php';
+
+// Addons
+require 'addons/gts-setup/gts-setup.php';

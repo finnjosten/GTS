@@ -125,6 +125,7 @@
                     "collapsed": "",
                     "button_label": "Nieuw onderdeel in deze fase",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_63da194bbc091",
                     "sub_fields": [
                         {
                             "key": "field_63da1e3acc602",
@@ -211,7 +212,9 @@
                                     "allow_null": 0,
                                     "ui": 0,
                                     "ajax": 0,
-                                    "placeholder": ""
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0
                                 },
                                 {
                                     "key": "field_63da1e5fcc604",
@@ -261,8 +264,7 @@
                                 }
                             ]
                         }
-                    ],
-                    "parent_repeater": "field_63da194bbc091"
+                    ]
                 }
             ]
         },
@@ -311,7 +313,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6461d7ff318cd",
@@ -339,7 +343,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_63da194bbc104",
@@ -356,10 +362,10 @@
                 "id": ""
             },
             "choices": {
-                "transparent": "Transparent",
-                "white": "White",
-                "primary": "Primary",
-                "secondary": "Secondary"
+                "transparent": "Transpirant",
+                "primary": "Primair",
+                "secondary": "Secundair",
+                "dark": "Donker"
             },
             "default_value": false,
             "return_format": "value",
@@ -367,7 +373,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         }
     ],
     "location": [
@@ -385,7 +393,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
-    "show_in_rest": 0
+    "show_in_rest": 0,
+    "modified": 1761329233
 }

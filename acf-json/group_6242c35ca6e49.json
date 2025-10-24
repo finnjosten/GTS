@@ -183,10 +183,13 @@
                         "id": ""
                     },
                     "choices": {
-                        "primary": "Primary",
+                        "primary": "Primair",
                         "outline": "Outline",
-                        "dark": "Dark",
-                        "light": "Light"
+                        "dark": "Donker",
+                        "light": "Light",
+                        "primary-outline": "Primair outline",
+                        "secondary": "Secundair",
+                        "secondary-outline": "Secundair outline"
                     },
                     "default_value": false,
                     "return_format": "value",
@@ -298,5 +301,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751542709
+    "modified": 1761329229
 }

@@ -74,10 +74,13 @@
                 "id": ""
             },
             "choices": {
-                "primary": "Primary",
+                "primary": "Primair",
                 "outline": "Outline",
-                "dark": "Dark",
-                "light": "Light"
+                "dark": "Donker",
+                "light": "Light",
+                "primary-outline": "Primair outline",
+                "secondary": "Secundair",
+                "secondary-outline": "Secundair outline"
             },
             "default_value": false,
             "return_format": "value",
@@ -86,7 +89,9 @@
             "allow_in_bindings": 1,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6331674d7ada5",
@@ -191,7 +196,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6461d8600a4d8",
@@ -220,7 +227,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_62a0987aa69fb",
@@ -238,11 +247,10 @@
             },
             "wpml_cf_preferences": 3,
             "choices": {
-                "transparent": "Transparent",
-                "primary": "Primary",
-                "secondary": "Secondary",
-                "dark": "Dark",
-                "light": "Light"
+                "transparent": "Transpirant",
+                "primary": "Primair",
+                "secondary": "Secundair",
+                "dark": "Donker"
             },
             "default_value": false,
             "return_format": "value",
@@ -250,7 +258,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_67b6f1b272631",
@@ -354,5 +364,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741171604
+    "modified": 1761329233
 }

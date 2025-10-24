@@ -1,13 +1,13 @@
 {
-    "key": "group_66851b0b988f8",
-    "title": "Posttype: Veelgestelde vragen",
+    "key": "group_68ca9635d77b0",
+    "title": "Menu item",
     "fields": [
         {
-            "key": "field_66851b0d3bb8a",
-            "label": "Antwoord",
-            "name": "anwer",
+            "key": "field_68ca963acc732",
+            "label": "Tekst",
+            "name": "text",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -17,18 +17,19 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "visual",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 1
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "nav_menu_item",
                 "operator": "==",
-                "value": "faq"
+                "value": "location\/sidemenu"
             }
         ]
     ],
@@ -38,8 +39,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": false,
+    "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1761329236
+    "modified": 1761329234
 }
