@@ -32,6 +32,7 @@ function gts_setup_admin_page() {
         <br>
 		<p>Follow these simple steps to get started:</p>
 		<ol>
+			<li>Remove default plugins, pages and comments.</li>
 			<li>Activate the required and recommended plugins. (Plugins &rarr; Required plugins), then configure them (more on that below)</li>
 			<li>Remove default pages and posts.</li>
 			<li>Create a homepage and give it the "GTS Home" template.</li>
@@ -116,11 +117,49 @@ function gts_setup_admin_page() {
         <p>Click on the sync available, then het the check box to select everything, scroll down till the bottom. Then at bulk actions choose "Sync changes" and hit apply. Its possible that not all the fields are synced the first time due the ammount, If thats the case just go back up select all and sync again.</p>
         <p>Then head on over to (SCF &rarr; Post Types) and do the same (Sync available &rarr; select all &rarr; bulk action to sync &rarr; apply &rarr; possibly do again till all is done)</p>
         <p>Then head on over to (SCF &rarr; Taxonomies) and do the same (Sync available &rarr; select all &rarr; bulk action to sync &rarr; apply &rarr; possibly do again till all is done)</p>
+        <br>
+        <h3>WP Super Cache</h3>
+        <p>Only activate this plugin after you are done setting up the site!!</p>
+        <p>Go to the WP Super Cache settings page (Setings &rarr; WP Super Cache), scroll down to "Caching", hit "Caching On" and hit update status. Yep that was all easy right?</p>
 
 
         <br>
         <br>
         <h2>Creating sidebar widgets</h2>
+        <p>You want to setup a sidebar huh? Well oke then let me explain how to propperly do it :)</p>
+        <p>First head on over to the widget area (Appearance &rarr; Widgets). Now we are going to work in the "GTS Sidebar" widget area.</p>
+        <p>So what is the structure for creating a sidebar? Because just throwing in widgets might get you some where but it wont work as you hope.</p>
+        <p>All seperate widgets need to be in a "Group", In the settings of this group under "Advanced &rarr; HTML Element" you will always select "&lt;section&gt;". Why? well this is to make sure all the widgets "groups" have the correct styling (like a border below and padding)</p>
+        <p>In that group you can add any widget you like, here is a simple sidebar setup:</p>
+        <p>
+            (start of) Group <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(start of) Group (this is a group with &lt;header&gt;) <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Heading h2: GreenTech Solutions <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text: Lorem ipsum <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(end of) Group <br>
+            (end of) Group <br>
+            <br>
+            <br>
+            (start of) Group <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Mini posts block: Auto fill on, Blog count 3, Blog offset 0 <br>
+            (end of) Group <br>
+            <br>
+            <br>
+            (start of) Group <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Post list block: Auto fill on, Blog count 5, Blog offset 3 <br>
+            (end of) Group <br>
+            <br>
+            <br>
+            (start of) Group <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Heading h2: About <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Text: Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies. <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;List: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- List item: Learn more (with link to #), List item hs under advanced CSS class of "button" <br>
+            (end of) Group <br>
+
+        </p>
+
+
 
         <br>
         <br>
