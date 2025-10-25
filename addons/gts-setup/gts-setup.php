@@ -156,7 +156,6 @@ function gts_setup_admin_page() {
             &nbsp;&nbsp;&nbsp;&nbsp;List: <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- List item: Learn more (with link to #), List item hs under advanced CSS class of "button" <br>
             (end of) Group <br>
-
         </p>
 
 
