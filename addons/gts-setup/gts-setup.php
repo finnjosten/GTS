@@ -133,7 +133,7 @@ function gts_setup_admin_page() {
         <p>In that group you can add any widget you like, here is a simple sidebar setup:</p>
         <p>
             (start of) Group <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;(start of) Group (this is a group with &lt;header&gt;) <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(start of) Group (this is a group with &lt;header&gt; instead of &lt;section&gt;) <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Heading h2: GreenTech Solutions <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text: Lorem ipsum <br>
             &nbsp;&nbsp;&nbsp;&nbsp;(end of) Group <br>
@@ -164,6 +164,11 @@ function gts_setup_admin_page() {
         <br>
         <br>
         <h2>Creating blog posts</h2>
+        <p>This is simple, just go over to the Blogs tab in the menu.</p>
+        <p>From there you can either add a blog or edit blogs.</p>
+        <p>Lets say you created a blog, you can easily modify all the needed information about the post in the bottom.</p>
+        <p>Make sure to just fill in everything that is needed. Lets say you would want to add a old blog post that already had 120 likes, Then fill in the Likes ammount, Otherwise leave them as is!! They will can/will auto update once someone likes (WIP).</p>
+        <p>To add content to the blog just use the normal blog editor with just simple text headings list and all those blocks.</p>
 
 	</div>
 
