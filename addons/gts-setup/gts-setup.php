@@ -32,12 +32,11 @@ function gts_setup_admin_page() {
         <br>
 		<p>Follow these simple steps to get started:</p>
 		<ol>
-			<li>Remove default plugins, pages and comments.</li>
+			<li>Remove default plugins, pages, posts and comments.</li>
 			<li>Activate the required and recommended plugins. (Plugins &rarr; Required plugins), then configure them (more on that below)</li>
-			<li>Remove default pages and posts.</li>
 			<li>Create a homepage and give it the "GTS Home" template.</li>
 			<li>Configure sidebar widgets (Appearance &rarr; Widgets), more on how to configure them below.</li>
-			<li>Check theme options for additional settings. Suggested to turn off comments</li>
+			<li>Check WP options for additional settings. Suggested to turn off comments</li>
             <li>Create blogs posts and assign categories to them. Again more on that below</li>
 		</ol>
 
